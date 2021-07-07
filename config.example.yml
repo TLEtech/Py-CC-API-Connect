@@ -1,0 +1,73 @@
+# Config file for variable storage
+Creds:
+  user: 
+  userPW: 
+  ID: 
+  secret: 
+  b64string: 
+
+Params:
+  scopes: 'contact_data+campaign_data'
+  responseType: 'code'
+  grantType: 'authorization_code'
+
+URL:
+  apibase: 
+  callback: 
+  redirect: 
+  oAuth2Base: 
+  token: 
+  contacts: 
+
+Endpoints:
+  exportCSV: 
+  contacts: 
+
+Misc:
+  custid_field: 
+  code: 
+
+CustomFields:
+  rep: 
+  department: 
+  contact: 
+  custID: 
+  apiadd:
+
+# These will be custom based on what lists exist on your CContact account.
+Lists:
+  blades:
+  tile:
+  abrasives:
+  tools:
+  all:
+  welders:
+  new:
+
+DBC:
+  server: 'ServerName'
+  DB: 'DatabaseName'
+  ReadUser: 'ReadUser'
+  PW: 'PW'
+  ReadTable: '[ServerName].[DatabaseName].[schema].[Table]'
+  ReadQuery: 'SELECT Column1, Column2 FROM Table'
+# Additional statements for adding readability and scalability to the query.
+  ReadWhere1: " WHERE Column LIKE 'example%'"
+  ReadWhere2: " AND Column LIKE 'example%'"
+  ReadWhere3: " AND Column LIKE 'example%'"
+  ReadWhere4: " AND Column LIKE 'example%'"
+  ReadOrderByStmt: ' ORDER BY Column3 DESC'
+
+# Mail server & sending settings
+Mail:
+  outgoing: 'smtp.example.com'
+  port: 465
+  pw: 'EmailPW'
+  user: 'example@example.com'
+  sender: 'sender@example.com'
+  receiver: 'receiver@example.com'
+
+# Created this for post API call subject and body.
+PostAudit:
+  subject: "Constant Contact Automation Report: New Contacts"
+  body: "Enclosed is an audit workbook for the most recent automated Constant Contact update. \n\nThis can be utilized to fix invalid emails. \n\nContact support with any issues or questions. \n\n - Organization Support"
