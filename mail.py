@@ -8,16 +8,13 @@ from datetime import date
 with open("config.yml", 'r') as configInfo:
     config = yaml.safe_load(configInfo)
 
+# Email variables
 port = config['Mail']['port']
 password = config['Mail']['pw']
 user = config['Mail']['user']
 outgoing = config['Mail']['outgoing']
 sender = config['Mail']['sender']
 receiver = config['Mail']['receiver']
-message = """\
-Subject: Hi there
-
-This message is sent from Python."""
 
 # Post Contacts Audit Info
 post_audit_subject = config['PostAudit']['subject']
@@ -45,7 +42,8 @@ part.add_header(
 post_audit_message.attach(part)
 text = post_audit_message.as_string()
 
-# Basic SSL Email
+
+# send post audit email function
 
 
 def email_post_audit_attachment():
